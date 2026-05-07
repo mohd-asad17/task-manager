@@ -276,10 +276,12 @@ const Tasks: React.FC = () => {
               initial={{ scale: 0.95, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: 20 }}
-              className="relative glass-panel rounded-[2.5rem] w-full max-w-xl p-12 shadow-2xl overflow-hidden"
+              className="relative glass-panel rounded-[2.5rem] w-full max-w-xl max-h-[90vh] overflow-y-auto p-12 shadow-2xl custom-scrollbar"
             >
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-indigo-500 to-red-500" />
-              <h2 className="text-4xl font-black uppercase tracking-tighter italic mb-10 gradient-text">Define Task</h2>
+              <div className="sticky -top-12 -mx-12 mb-10 px-12 pt-12 pb-6 bg-zinc-900/80 backdrop-blur-md z-10">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-indigo-500 to-red-500" />
+                <h2 className="text-4xl font-black uppercase tracking-tighter italic gradient-text">Define Task</h2>
+              </div>
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="space-y-2">
                   <label className="text-[10px] font-black uppercase tracking-widest text-zinc-500">Operation Header</label>
